@@ -1,5 +1,7 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
+import UserMessage from './UserMessage';
+import '../App.css';
 
 const Chat = () => {
   return (
