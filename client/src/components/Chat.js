@@ -1,4 +1,5 @@
 import '../App.css';
+import UserMessage from './UserMessage';
 
 function Chat() {
 
