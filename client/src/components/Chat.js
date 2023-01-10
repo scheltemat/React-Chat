@@ -12,24 +12,42 @@ const Chat = () => {
       <div className='headerSection'>
         Header section
       </div>
-      <div>
-        <div className=' right d-flex justify-content-end'>
-          <UserMessage />
-        </div>
-        <div className=' left d-flex justify-content-start'>
-          <ChatterMessage />
+
+      <div className='message-area'>
+        <div>
+          <div className=' right d-flex justify-content-end'>
+            <UserMessage />
+          </div>
+          <div className=' left d-flex justify-content-start'>
+            <ChatterMessage />
+          </div>
+          <div className=' right d-flex justify-content-end'>
+            <UserMessage />
+          </div>
+          <div className=' left d-flex justify-content-start'>
+            <ChatterMessage />
+          </div>
+          <div className=' right d-flex justify-content-end'>
+            <UserMessage />
+          </div>
+          <div className=' left d-flex justify-content-start'>
+            <ChatterMessage />
+          </div>
         </div>
       </div>
-      <Form>
-        <Form.Group className="mt-3" controlId="text">
-          <div className='d-flex'>
-            <Form.Control type="text" placeholder="Message" />
-            <Button variant="info" type="submit">
-              Send
-            </Button>
-          </div>
-        </Form.Group>
-      </Form>
+      
+      <div className='text-area'>
+        <Form>
+          <Form.Group className="mt-3" controlId="text">
+            <div className='d-flex'>
+              <Form.Control type="text" placeholder="Message" />
+              <Button variant="info" type="submit">
+                Send
+              </Button>
+            </div>
+          </Form.Group>
+        </Form>
+      </div>
     </>
   )
 }
