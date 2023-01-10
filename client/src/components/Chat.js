@@ -1,12 +1,18 @@
-import '../App.css';
+import React from 'react'
 import ChatterMessage from './ChatterMessage';
 import UserMessage from './UserMessage';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import '../App.css';
 
-function Chat() {
-
+const Chat = () => {
+  
   return (
     <>
-      <div >
+      <div className='headerSection'>
+        Header section
+      </div>
+      <div>
         <div className=' right d-flex justify-content-end'>
           <UserMessage />
         </div>
@@ -14,9 +20,18 @@ function Chat() {
           <ChatterMessage />
         </div>
       </div>
-      <div className='textSection'><input type="text"></input><input type="submit"></input></div>
+      <Form>
+        <Form.Group className="mt-3" controlId="text">
+          <div className='d-flex'>
+            <Form.Control type="text" placeholder="Message" />
+            <Button variant="info" type="submit">
+              Send
+            </Button>
+          </div>
+        </Form.Group>
+      </Form>
     </>
-  );
+  )
 }
 
-export default Chat;
+export default Chat
