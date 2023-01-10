@@ -4,10 +4,9 @@ const UserMessage = () => {
   return (
     <>
       <div className='row'>
-        <div className='col userMessage bg-info'>Hello World</div>
-        <div className='col userpfp'>
-          <img src="/pfp_placeholder.png" className="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" height="50px" width="50px"/>
-        </div>
+        <div className='col userMessage bg-info'>
+          <p className='messagecontent'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit maiores, veritatis soluta repellat totam quasi, inventore officia placeat, beatae doloremque porro quibusdam. Temporibus perferendis recusandae incidunt mollitia minus consequatur illo?</p>
+          </div>
       </div>
     </>
   )
