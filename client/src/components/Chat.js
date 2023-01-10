@@ -1,9 +1,12 @@
 import React from 'react'
 import ChatterMessage from './ChatterMessage';
 import UserMessage from './UserMessage';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import '../App.css';
 
 const Chat = () => {
+  
   return (
     <>
       <div className='headerSection'>
@@ -17,7 +20,16 @@ const Chat = () => {
           <ChatterMessage />
         </div>
       </div>
-      <div className='textSection'><input type="text"></input><input type="submit"></input></div>
+      <Form>
+        <Form.Group className="mt-3" controlId="text">
+          <div className='d-flex'>
+            <Form.Control type="text" placeholder="Message" />
+            <Button variant="info" type="submit">
+              Send
+            </Button>
+          </div>
+        </Form.Group>
+      </Form>
     </>
   )
 }

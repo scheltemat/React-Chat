@@ -9,8 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 //Components
 import Chat from './components/Chat';
-import Login from './components/Login';
-import Register from './components/Register';
+import Login from './components/ReqAuth/Login';
+import Register from './components/ReqAuth/Register';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
