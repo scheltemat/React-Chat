@@ -8,10 +8,12 @@ const mongoose = require('mongoose');
 const databaseInfo = require('./secret');
 mongoose.connect(databaseInfo.connect)
 const UserModel = require('./models/Users');
+const cors = require('cors');
 
 
 //body parser
 app.use(express.json());
+app.use(cors())
 
 //register new user
 app.post("/createUser", async (req, res) =>{

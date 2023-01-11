@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
+import Axios from 'axios'
 
 const Register = () => {
 
@@ -9,13 +11,25 @@ const Register = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
+  const navigate = useNavigate()
+
   const handleSubmit= (e) => {
-    console.log("submit form");
+    // console.log("submit form");
     e.preventDefault()
 
-    //dispatch stuff would go here
-  }
+    //post data to database
+    Axios.post("http://localhost:3001/createUser", {
+      username: username, 
+      email: email, 
+      password: password 
+    }).then((response) => {
+      alert("user registered");
+    })
 
+    navigate("/login") //redirects to login when form is submitted
+
+    // dispatch stuff would go here
+  }
 
   return (
     <>
