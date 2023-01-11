@@ -1,3 +1,4 @@
+/* chat section */
 .headerSection{
   margin-top: 2%;
   margin-bottom: 2%;
@@ -31,7 +32,6 @@
 .userpfp img{
   border-radius: 50%;
 }
-
 
 .messagecontent{
   padding: 5px;
