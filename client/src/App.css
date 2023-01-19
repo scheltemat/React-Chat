@@ -1,27 +1,10 @@
 /* chat section */
-.headerSection{
-  margin-top: 2%;
-  margin-bottom: 2%;
+.header-area{
+  padding-top: 1%;
+  padding-bottom: 1%;
   text-align: center;
-}
-.textSection{
-  margin-top: 2%;
-  text-align: center;
-}
-
-
-.userMessage{
-  margin-right: 20px;
-  margin-bottom: 10px;
-  border-radius: 15px;
-  max-width: 60vw;
-}
-.chatterMessage{
-  margin-left: 20px;
-  margin-bottom: 10px;
-  padding: 0px;
-  max-width: 60vw;
-  border-radius: 15px;
+  background-color: black;
+  color: white;
 }
 
 .userpfp{
@@ -31,8 +14,49 @@
 
 .userpfp img{
   border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.message-area{
+  padding-top: 1%;
+  padding-bottom: 2%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.text-area{
+  position: relative;
+  text-align: center;
+}
+
+.text-area form{
+  /* position: absolute;
+  bottom: 0; */
+  background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+
+/* message components */
+.userMessage{
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  max-width: 60vw;
+}
+.chatterMessage{
+  /* margin-left: 20px; */
+  margin-bottom: 10px;
+  padding: 0px;
+  padding-left: 10px;
+  border-radius: 15px;
+}
+
+.row .chatterMessage{
+  max-width: 60vw;
 }
 
 .messagecontent{
   padding: 5px;
+  margin-bottom: 0px;
 }

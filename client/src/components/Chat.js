@@ -9,11 +9,15 @@ const Chat = () => {
   
   return (
     <>
-      <div className='headerSection'>
+      <div className='header-area'>
         <div className='right d-flex justify-content-end me-3'>
-          <div>
-            username
-            <img src="/pfp_placeholder.png" height="50px" width="50px"></img>
+          <div className='d-flex align-items-center'>
+            <div>
+              username
+            </div>
+            <div className='userpfp'>
+              <img src="/pfp_placeholder.png"></img>
+            </div>
           </div>
         </div>
       </div>
