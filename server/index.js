@@ -25,16 +25,17 @@ app.post("/createUser", async (req, res) =>{
 })
 
 //find user data
-app.get("/getUsers", (req, res) =>{
-    UserModel.find({}, (err, result) =>{
-        if(err){
-            res.json(err)
-        }
-        else{
-            res.json(result)
-        }
-    })
-})
+// app.get("/getUsers", (req, res) =>{
+//     UserModel.find({}, (err, result) =>{
+//         if(err){
+//             res.json(err)
+//         }
+//         else{
+//             res.json(result)
+//         }
+//     })
+// })
+
 
 // //retrieve messages from db
 // app.get("/getMessages", async (req, res) =>{

@@ -23,7 +23,7 @@ const Register = () => {
       email: email, 
       password: password 
     }).then((response) => {
-      alert("user registered");
+      alert("Account registered successfully");
     })
 
     navigate("/login") //redirects to login when form is submitted
