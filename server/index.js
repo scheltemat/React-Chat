@@ -1,7 +1,8 @@
 //express setup
 const express = require('express');
 const app = express();
-const port = 3001
+const port = 4200
+
 
 //database setup
 const mongoose = require('mongoose');
@@ -15,26 +16,8 @@ const cors = require('cors');
 app.use(express.json());
 app.use(cors())
 
-//register new user
-app.post("/createUser", async (req, res) =>{
-    const user = req.body //data passed from front end form
-    const newUser = new UserModel(user);
-    await newUser.save();
 
-    res.json(user);
-})
-
-//find user data
-// app.get("/getUsers", (req, res) =>{
-//     UserModel.find({}, (err, result) =>{
-//         if(err){
-//             res.json(err)
-//         }
-//         else{
-//             res.json(result)
-//         }
-//     })
-// })
+app.use(require('./routes/authentication'))
 
 
 // //retrieve messages from db
