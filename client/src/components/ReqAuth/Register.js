@@ -14,16 +14,16 @@ const Register = () => {
   const navigate = useNavigate()
 
   const handleSubmit= (e) => {
-    // console.log("submit form");
-    e.preventDefault()
+    e.preventDefault();
 
     //post data to database
-    Axios.post("http://localhost:3001/createUser", {
+    Axios.post("http://localhost:4200/createUser", {
       username: username, 
       email: email, 
       password: password 
     }).then((response) => {
       alert("Account registered successfully");
+      console.log(response)
     })
 
     navigate("/login") //redirects to login when form is submitted
@@ -42,17 +42,26 @@ const Register = () => {
             <Form>
               <Form.Group className="mb-3" controlId="formBasicUsername">
                 <Form.Label>Username</Form.Label>
-                <Form.Control type="username" placeholder="Enter username" onChange={e => setUsername(e.target.value)} />
+                <Form.Control 
+                  type="username" 
+                  placeholder="Enter username" 
+                  onChange={e => setUsername(e.target.value)} />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" onChange={e => setEmail(e.target.value)}/>
+                <Form.Control 
+                  type="email" 
+                  placeholder="Enter email" 
+                  onChange={e => setEmail(e.target.value)}/>
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+                <Form.Control 
+                  type="password" 
+                  placeholder="Password" 
+                  onChange={e => setPassword(e.target.value)} />
               </Form.Group>
 
               <Button variant="primary" type="submit" onClick={handleSubmit}>
