@@ -1,10 +1,11 @@
 import React, {useState, useContext} from 'react'
 import { useNavigate } from 'react-router-dom'
+import AuthContext from '../../context/AuthContext';
+
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import Axios from 'axios'
-import AuthContext from '../../context/AuthContext';
 
 const Login = () => {
 
@@ -12,7 +13,7 @@ const Login = () => {
   const [password, setPassword] = useState("")
   const [errorMessage, setErrorMessage] = useState("")
 
-  const {auth, setAuth} = useContext(AuthContext);
+  const {setAuth} = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -25,11 +26,12 @@ const Login = () => {
     }).then((res) => {
       //checking jwt
       if(res.data.user){
-        console.log("success")
+        // console.log(res.data)
         setAuth(true)
+        localStorage.setItem('token', res.data.user)
         navigate("/") //redirects to protected page
       } else {
-        console.log("fail")
+        // console.log("fail")
         setErrorMessage("Incorrect username or password")
       }
     })

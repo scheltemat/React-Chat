@@ -29,9 +29,10 @@ router.post("/createUser", async (req, res) => {
 
 //user login
 router.post('/login', async (req, res) => {
+    const {username, password} = req.body;
     const user = await UserModel.findOne({
-        username: req.body.username,
-        password: req.body.password,
+        username: username,
+        password: password,
     })
     if(user){
         const token = jwt.sign({
@@ -43,5 +44,6 @@ router.post('/login', async (req, res) => {
         return res.json({status: 'error', user: false})
     }
 })
+
 
 module.exports = router

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 import ChatterMessage from './ChatterMessage';
 import UserMessage from './UserMessage';
 import Form from 'react-bootstrap/Form';
@@ -6,6 +7,22 @@ import Button from 'react-bootstrap/Button';
 import '../App.css';
 
 const Chat = () => {
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+
+    // const token = localStorage.getItem('token')
+    // if(token){
+    //   // const user = jwt.decode(token)
+    //   if(!user){
+    //     localStorage.removeItem('token')
+    //     navigate('/login')
+    //   }
+    // }
+    
+  }, [])
+  
   
   return (
     <>
