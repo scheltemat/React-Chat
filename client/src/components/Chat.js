@@ -16,7 +16,7 @@ const Chat = () => {
               username
             </div>
             <div className='userpfp'>
-              <img src="/pfp_placeholder.png"></img>
+              <img src="/pfp_placeholder.png" alt='profile-pic'></img>
             </div>
           </div>
         </div>
