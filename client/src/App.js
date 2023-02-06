@@ -15,8 +15,8 @@ import Register from './components/auth/Register';
 
 const App = () => {
 
-    const [auth, setAuth] = useState(false)
-    const value = {auth, setAuth};
+  const [auth, setAuth] = useState(false)
+  const value = {auth, setAuth};
 
   return (
     <React.StrictMode>

@@ -42,53 +42,55 @@ const Login = () => {
 
   return (
     <>
-      <Card>
-        <Card.Body>
-          <div>
-            <div className='card-title'>
-              <h3>Login</h3>
-            </div>
-            
-            <Form>
-              <Form.Group className="mb-3" controlId="formBasicUsername">
-                <Form.Label>Username</Form.Label>
-                <Form.Control 
-                  type="username" 
-                  placeholder="Enter username" 
-                  value={username} 
-                  onChange={e => setUsername(e.target.value)}/>
-              </Form.Group>
+      <div className='flex-container'>
+        <Card className=''>
+          <Card.Body>
+            <div>
+              <div className='card-title'>
+                <h3>Login</h3>
+              </div>
+              
+              <Form>
+                <Form.Group className="mb-3" controlId="formBasicUsername">
+                  <Form.Label>Username</Form.Label>
+                  <Form.Control 
+                    type="username" 
+                    placeholder="Enter username" 
+                    value={username} 
+                    onChange={e => setUsername(e.target.value)}/>
+                </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control 
-                  type="password" 
-                  placeholder="Password" 
-                  value={password} 
-                  onChange={e => setPassword(e.target.value)}/>
-              </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control 
+                    type="password" 
+                    placeholder="Password" 
+                    value={password} 
+                    onChange={e => setPassword(e.target.value)}/>
+                </Form.Group>
 
-              <Button variant="primary" type="submit" onClick={handleSubmit}>
-                Login
-              </Button>
+                <Button variant="primary" type="submit" onClick={handleSubmit}>
+                  Login
+                </Button>
 
-              {errorMessage ? (
-                <div>
-                  <br></br>
+                {errorMessage ? (
                   <div>
-                    {errorMessage}
+                    <br></br>
+                    <div>
+                      {errorMessage}
+                    </div>
                   </div>
-                </div>
-                ) : null
-              }
+                  ) : null
+                }
 
-              <Form.Group className="mt-3" controlId="">
-                <Form.Label>Need an account? <a href='/register'>Register</a></Form.Label>
-              </Form.Group>
-            </Form>
-          </div>
-        </Card.Body>
-      </Card>
+                <Form.Group className="mt-3" controlId="">
+                  <Form.Label>Need an account? <a href='/register'>Register</a></Form.Label>
+                </Form.Group>
+              </Form>
+            </div>
+          </Card.Body>
+        </Card>
+      </div>
     </>
   );
 }

@@ -1,3 +1,15 @@
+/* login/register components */
+.flex-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.card{
+  width: 50vw;
+}
+
+
 /* chat section */
 .header-area{
   padding-top: 1%;
