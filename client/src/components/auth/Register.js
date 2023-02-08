@@ -28,7 +28,7 @@ const Register = () => {
       navigate("/login") //redirects to login when form is submitted
     })
     .catch((err) => {
-      // console.log(err)
+      console.warn(err)
       setErrorMessage("Email or username already in use")
     })
     // dispatch stuff would go here
